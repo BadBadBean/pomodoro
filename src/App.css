@@ -19,6 +19,7 @@ body {
   background-color: #30384b;
   color: #fff;
   text-align: center;
+  font-family: "poppins";
 }
 
 main {
@@ -32,18 +33,19 @@ form {
 
 .btn {
   margin-block: 20px;
-  font-size: 1.5em;
+  font-size: 1em;
   background-color: transparent;
   color: #fff;
   padding-inline: 1rem;
   padding-block: 0.5rem;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 dialog {
   margin: auto;
-  padding-inline: 20px;
+  padding-inline: 100px;
+  padding-block: 50px;
   background-color: #30384b;
   color: #fff;
   border-radius: 10px;
@@ -51,15 +53,19 @@ dialog {
 }
 
 dialog::backdrop {
-  background: rgba(177, 191, 225, 0.8);
-}
-
-h2 {
-  margin-block: 1rem;
+  background: rgba(177, 191, 225, 0.3);
 }
 
 footer {
   width: 100%;
   background-color: #242a38;
   padding-block: 10px;
+}
+
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: #f54e4e;
 }

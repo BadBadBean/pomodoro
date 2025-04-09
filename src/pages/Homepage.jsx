@@ -12,7 +12,7 @@ function Homepage() {
       < Timer />
       <Button
         type="button"
-        label="⚙️ Settings"
+        label="⚙️"
         onClick={() => setShowSettings(true)}
       />
       <SettingsModal open={showSettings} onClose={() => setShowSettings(false)} />

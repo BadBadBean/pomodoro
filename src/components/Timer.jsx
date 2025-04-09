@@ -81,8 +81,8 @@ function Timer() {
       </div>
       <div>
         {isPaused 
-          ?  <Button type="button" label="Start" onClick={() => { setIsPaused(false); isPausedRef.current = false; }}/> 
-          : <Button type="button" label="Pause" onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
+          ?  <Button type="button" label="▶" onClick={() => { setIsPaused(false); isPausedRef.current = false; }}/> 
+          : <Button type="button" label="❚❚" onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
       </div>
     </>
   );
