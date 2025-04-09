@@ -17,8 +17,8 @@ export default function SettingsModal({ open, onClose }) {
         }, [open]);
     
     return (
-        <dialog ref={dialogRef} onClose={onClose} className="rounded-lg p-4 max-w-sm w-full shadow-xl">
-      <h2 className="text-xl font-bold mb-4">Paramètres Pomodoro</h2>
+        <dialog ref={dialogRef} onClose={onClose}>
+          <h2>Paramètres Pomodoro</h2>
 
       <form>
         <label>work: {settingsInfo.workMinutes}:00</label>

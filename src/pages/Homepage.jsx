@@ -15,7 +15,6 @@ function Homepage() {
         label="⚙️ Settings"
         onClick={() => setShowSettings(true)}
       />
-
       <SettingsModal open={showSettings} onClose={() => setShowSettings(false)} />
     </main>
   )

@@ -1,13 +1,33 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
 body {
   background-color: #30384b;
   color: #fff;
+  text-align: center;
 }
 
 main {
-    padding-top: 50px;
     max-width: 340px;
     margin: 0 auto;
-    text-align: center;
+}
+
+form {
+  margin-top: 30px;
 }
 
 .btn {
@@ -21,23 +41,25 @@ main {
   cursor: pointer;
 }
 
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+dialog {
+  margin: auto;
+  padding-inline: 20px;
+  background-color: #30384b;
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid #242a38;
 }
 
-header ul {
-  list-style: none;
-  display: flex;
-  gap: 26px;
+dialog::backdrop {
+  background: rgba(177, 191, 225, 0.8);
 }
 
-header a {
-  color: inherit;
-  text-decoration: none;
+h2 {
+  margin-block: 1rem;
 }
 
 footer {
-  text-align: center;
+  width: 100%;
+  background-color: #242a38;
+  padding-block: 10px;
 }
