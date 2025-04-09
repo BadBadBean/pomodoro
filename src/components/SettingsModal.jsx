@@ -16,35 +16,42 @@ export default function SettingsModal({ open, onClose }) {
       dialog.close();
     }
 
-    const handleBackdropClick = (event) => {
+    const handleOutsideClose = (event) => {
       if (event.target === dialog) {
         onClose();
       }
     };
 
-    dialog.addEventListener("click", handleBackdropClick);
+    dialog.addEventListener("click", handleOutsideClose);
 
     return () => {
-      dialog.removeEventListener("click", handleBackdropClick);
+      dialog.removeEventListener("click", handleOutsideClose);
     };
   }, [open, onClose]);
 
   return (
     <dialog ref={dialogRef} onClose={onClose}>
+      <div className="dialog__container">
       <h2>Paramètres</h2>
       <form>
-        <label>work: {settingsInfo.workMinutes}:00</label>
+        <fieldset>
+        <legend>Temps de travail</legend>
+        <label>{settingsInfo.workMinutes}:00 minutes</label>
         <Slider
           defaultValue={settingsInfo.workMinutes}
           onChange={(newValue) => settingsInfo.setWorkMinutes(newValue)}
           variant="work"
         />
-        <label>break: {settingsInfo.breakMinutes}:00</label>
+        </fieldset>
+        <fieldset>
+        <legend>Temps de pause</legend>
+        <label>{settingsInfo.breakMinutes}:00 minutes</label>
         <Slider
           defaultValue={settingsInfo.breakMinutes}
           onChange={(newValue) => settingsInfo.setBreakMinutes(newValue)}
           variant="break"
         />
+        </fieldset>
       </form>
       <div>
         <Button
@@ -52,6 +59,7 @@ export default function SettingsModal({ open, onClose }) {
           label="Fermer"
           onClick={() => dialogRef.current.close()}
         />
+      </div>
       </div>
     </dialog>
   );

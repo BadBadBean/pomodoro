@@ -28,7 +28,26 @@ main {
 }
 
 form {
-  margin-top: 30px;
+  margin-top: 45px;
+  text-align: start;
+}
+
+fieldset {
+  border: none;
+  margin-block: 10px;
+}
+
+legend {
+  margin-bottom: 20px;
+}
+
+legend:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  padding-top: 10px;
+  border-bottom: 1px solid #fff;
 }
 
 .btn {
@@ -44,8 +63,6 @@ form {
 
 dialog {
   margin: auto;
-  padding-inline: 100px;
-  padding-block: 50px;
   background-color: #30384b;
   color: #fff;
   border-radius: 10px;
@@ -54,6 +71,11 @@ dialog {
 
 dialog::backdrop {
   background: rgba(177, 191, 225, 0.3);
+}
+
+.dialog__container {
+  padding-inline: 70px;
+  padding-block: 30px 20px;
 }
 
 footer {
