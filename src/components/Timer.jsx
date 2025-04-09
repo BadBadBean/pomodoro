@@ -3,7 +3,6 @@ import "react-circular-progressbar/dist/styles.css";
 import Button from "./Button";
 import { useContext, useEffect, useState, useRef } from "react";
 import SettingsContext from "../contexts/SettingsContext";
-import { Link } from "react-router-dom";
 
 const red = "#f54e4e";
 const green = "#4aec8c";
@@ -84,11 +83,6 @@ function Timer() {
         {isPaused 
           ?  <Button type="button" label="Start" onClick={() => { setIsPaused(false); isPausedRef.current = false; }}/> 
           : <Button type="button" label="Pause" onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
-      </div>
-      <div>
-        <Link to="/settings">
-        <Button type="button" label="Settings" />
-        </Link>
       </div>
     </>
   );
